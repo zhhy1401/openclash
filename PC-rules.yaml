@@ -17,8 +17,8 @@
 #    proxy: 直连
 
 # 节点信息
-#proxies:
-#  - {name: 直连, type: direct}
+proxies:
+  - {name: 直连, type: direct}
 
 
 
@@ -152,10 +152,6 @@ proxy-groups:
 # 每次 url-test 请求 (使用 http://www.gstatic.com/generate_204 这种轻量级 URL) 产生的流量通常在 几 KB 到十几 KB 之间。这包括了 TCP/TLS 握手、HTTP 请求和响应头。
 # 假设：假设每次测试消耗 10KB。如果你的 url-test 组有 10 个节点，每 60 秒测速一次，一个月（30天）的流量是：约 4.3GB。请合理评估机场节点数量，以及interval的间隔。
  
-
-
-
-  - {name: 直连, type: select, proxies: [DIRECT]}
   - {name: 👆 手动选择节点, type: select, include-all: true}
   - {name: 🚊 IEPL专线, type: select, include-all: true, filter: "(?i)IEPL|专线"}
   - {name: ♻️ 香港-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(港|香港|(?i)HK|Hongkong)).*$"}
