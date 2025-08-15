@@ -96,7 +96,8 @@ dns:
     - 223.5.5.5
   proxy-server-nameserver:
     - https://223.5.5.5/dns-query
-  # namesever尽量用运营商提供的DNS
+
+  # namesever尽量用运营商提供的DNS，这里一定修改！！！速度快很多！！！
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
