@@ -123,24 +123,27 @@ proxy-groups:
 #  - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
 #  - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 20, interval: 300, filter: "^((?!(直连)).)*$"}
 
+
+#按如下配置，【🚊 IEPL专线】代理组、【👆 手动选择节点】代理组需要手动选择，其他都是自动选择。
+
   - {name: 直连, type: select, proxies: [DIRECT]}
   - {name: 👆 手动选择节点, type: select, include-all: true}
   - {name: 🚊 IEPL专线, type: select, include-all: true, filter: "(?i)IEPL|专线"}
-  - {name: ♻️ 香港-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(港|香港|(?i)HK|Hongkong)).*$"}
-  - {name: ♻️ 日本-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(日|(?i)JP|Japan)).*$"}
-  - {name: ♻️ 台湾-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(台|湾|灣|(?i)TW|Taiwan)).*$"}
-  - {name: ♻️ 新加坡-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$"}
-  - {name: ♻️ 韩国-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(韩|韩国|韓國|首尔|汉城|(?i)KR|Korea)).*$"}
-  - {name: ♻️ 美国-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(美|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|硅谷|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|(?i)US|States|America)).*$"}
+  - {name: ♻️ 香港-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(港|香港|(?i)HK|Hongkong)).*$"}
+  - {name: ♻️ 日本-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(日|(?i)JP|Japan)).*$"}
+  - {name: ♻️ 台湾-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(台|湾|灣|(?i)TW|Taiwan)).*$"}
+  - {name: ♻️ 新加坡-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(新加坡|坡|狮城|SG|Singapore)).*$"}
+  - {name: ♻️ 韩国-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(韩|韩国|韓國|首尔|汉城|(?i)KR|Korea)).*$"}
+  - {name: ♻️ 美国-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(美|纽约|波特兰|达拉斯|俄勒|凤凰城|费利蒙|硅谷|拉斯|洛杉|圣何塞|圣克拉|西雅|芝加|(?i)US|States|America)).*$"}
   - {name: ♻️ 俄罗斯-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(俄|俄罗斯|(?i)RU|Russia)).*$"}
-  - {name: ♻️ 台日新韩-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(韩|韩国|韓國|首尔|汉城|坡|狮城|日|台|湾|灣|(?i)KR|Korea|SG|Singapore|JP|Japan|TW|Taiwan)).*$"}
-  - {name: ♻️ 港台日新韩-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(韩|韩国|韓國|首尔|汉城|坡|狮城|日|台|湾|灣|港|香港|(?i)KR|Korea|SG|Singapore|JP|Japan|TW|Taiwan|HK|Hongkong)).*$"}
+  - {name: ♻️ 台日新韩-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(韩|韩国|韓國|首尔|汉城|坡|狮城|日|台|湾|灣|(?i)KR|Korea|SG|Singapore|JP|Japan|TW|Taiwan)).*$"}
+  - {name: ♻️ 港台日新韩-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?=.*(韩|韩国|韓國|首尔|汉城|坡|狮城|日|台|湾|灣|港|香港|(?i)KR|Korea|SG|Singapore|JP|Japan|TW|Taiwan|HK|Hongkong)).*$"}
   - {name: ♻️ 东南亚-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(越|越南|柬|柬埔寨|马来西亚|泰|泰国|印度尼西亚|印尼|老挝|菲|菲律宾|(?i)VN|Vietnam|KH|Cambodia|MY|Malaysia|TH|Thailand|Indonesia|Laos|Philippines)).*$"}
   - {name: ♻️ 澳洲-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(澳|澳大利亚|新西兰|悉尼|墨尔本|(?i)AU|Australia|NewZealand|Sydney|Melbourne)).*$"}
   - {name: ♻️ 欧洲-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(德国|希腊|芬兰|意大利|比利时|法国|荷兰|冰岛|瑞士|瑞典|西班牙|爱尔兰|挪威|立陶宛|波兰|(?i)GR|FR|Germany|Greece|Finland|Italy|Belgium|France|Netherlands|Iceland|Switzerland|Sweden|Spain|Ireland|Norway|Poland)).*$"}
   - {name: ♻️ 中东-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(阿拉伯|迪拜|沙特|利雅得|吉达|卡塔尔|以色列|土耳其|埃及|约旦|开罗|巴林|利比亚|也门|(?i)Arab|Dubai|Saudi|Arabia|Riyadh|Jeddah|Qatar|Israel|Turkey|Egypt|Jordan|Cairo|Bahrain|Libya|Yemen)).*$"}  
-  - {name: ♻️ 拉丁美洲-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(巴西|墨西哥|秘鲁|玻利维亚|智利|哥伦比亚|厄瓜多尔|巴拉圭|乌拉圭|委内瑞拉|(?i)Brazil|Mexico|Peru|Bolivia|Chile|Colombia|Ecuador|Paraguay|Venezuela|Uruguay)).*$"}
-  - {name: 🌐 所有-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?!.*(?i:DIRECT|REJECT|直连|拒绝)).*$"}
+  - {name: ♻️ 拉丁美洲-自动, type: url-test, include-all: true, tolerance: 20, interval: 100, filter: "^(?=.*(巴西|阿根廷|墨西哥|秘鲁|玻利维亚|智利|哥伦比亚|厄瓜多尔|巴拉圭|乌拉圭|委内瑞拉|(?i)Brazil|Argentina|Mexico|Peru|Bolivia|Chile|Colombia|Ecuador|Paraguay|Venezuela|Uruguay)).*$"}
+  - {name: 🌐 所有-自动, type: url-test, include-all: true, tolerance: 20, interval: 60, filter: "^(?!.*(?i:DIRECT|REJECT|直连|拒绝)).*$"}
 
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
